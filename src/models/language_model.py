@@ -16,4 +16,8 @@ class LanguageModel(AbstractModel):
     # Req. 3
     @classmethod
     def list_dicts(cls):
-        raise NotImplementedError
+        data = cls.find()
+        dict_list = [
+            {"name": d.data["name"],
+             "acronym": d.data["acronym"]} for d in data]
+        return [dict_list[0], dict_list[1], dict_list[2]]

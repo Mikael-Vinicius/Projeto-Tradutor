@@ -5,6 +5,7 @@ from database.db import db
 # Req. 1
 class LanguageModel(AbstractModel):
     _collection = db["language"]
+
     def __init__(self, data):
         super().__init__(data)
 

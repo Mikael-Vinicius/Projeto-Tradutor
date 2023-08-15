@@ -4,7 +4,7 @@ from database.db import db
 
 # Req. 1
 class LanguageModel(AbstractModel):
-    _collection = db["language"]
+    _collection = db["languages"]
 
     def __init__(self, data):
         super().__init__(data)
@@ -20,4 +20,4 @@ class LanguageModel(AbstractModel):
         dict_list = [
             {"name": d.data["name"],
              "acronym": d.data["acronym"]} for d in data]
-        return [dict_list[0], dict_list[1], dict_list[2]]
+        return dict_list

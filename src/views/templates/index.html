@@ -29,11 +29,9 @@
           </div>
           <li class="row to">
             <select name="translate-to">
-              {%if languages%}
               {% for language in languages %}
               <option>{{language.name}}</option>
               {% endfor %}
-              {%endif%}
             </select>
           </li>
         </ul>
